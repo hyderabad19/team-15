@@ -83,6 +83,7 @@
 
             <div class="Box-row d-flex px-3 py-2 approval-request">
               <div class="d-flex flex-column flex-auto">
+                {% for c in cluster %}
                 <div><a href="/clusters/cluster-id" class="no-underline link-gray-dark text-bold">Kishanbagh</a>
                 </div>
                 <div class="mt-1 text-small text-gray">
@@ -90,6 +91,7 @@
                   |
                   <span>4 resources being shared</span>
                 </div>
+                {% endfor %}
               </div>
             </div>
           </div>
