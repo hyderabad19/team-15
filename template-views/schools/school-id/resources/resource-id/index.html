@@ -1,0 +1,165 @@
+<html>
+
+<head>
+  <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
+  <link href="/stylesheet/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="Header Box-shadow">
+    <div class="Header-item">
+      <a class="Header-link d-flex flex-items-center" href="/" aria-label="Homepage">
+        <img class="nav-logo" src="/images/logo.jpg" alt="Loop Foundation Logo">
+      </a>
+    </div>
+
+    <div class="Header-item Header-item--full">
+      <span class="text-bold">Loop Education Foundation</span>
+      <!-- <nav class="d-flex text-bold" aria-label="Global">
+        </nav> -->
+    </div>
+
+    <div class="Header-item">
+      <nav class="d-flex flex-items-center">
+        <!-- {% if user_is_logged_in: %} -->
+        <a class="Header-link ml-3" href="/profile">
+          username
+        </a>
+
+        <form id="logout-form" class="m-0" action="/logout" method="POST">
+          <!-- {{ csrf_token }} -->
+          <button class="btn-link Header-link ml-3" type="submit">Logout</button>
+        </form>
+        <!-- {% else %} -->
+        <a class="Header-link ml-3" href="/login">Login</a>
+        <a class="Header-link ml-3" href="/register">Register</a>
+        <!-- {% endif %} -->
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-sm-12 col-md-3">
+          <!-- <div class="Box">
+              <div class="Box-header">
+                <h3 class="Box-title">Actions</h3>
+              </div>
+            </div> -->
+          <nav class="menu" aria-label="Person settings">
+            <a class="menu-item" href="/requests" aria-current="page">
+              Approval requests
+              <span class="mt-1 ml-1 Counter Counter--gray">2</span>
+            </a>
+            <a class="menu-item" href="/reports">Reports</a>
+            <a class="menu-item" href="/clusters">Clusters</a>
+            <a class="menu-item" href="/schools/">Schools</a>
+          </nav>
+        </div>
+
+        <div class="column col-sm-12 col-md-9">
+          <h3 class="Subhead">Playground</h3>
+
+          <div class="mb-1">Resource shared by <a href="/schools/school-id/" class="text-bold">Abraham High School</a>.</div>
+          <div class="mb-1">Estimated capacity: <strong class="text-bold">30</strong></div>
+          <div class="mb-1">Availability: <span class="mt-1 bg-green Counter Counter--gray">Available</span></div>
+          <div class="mb-1">Status: <span class="mt-1 bg-green Counter Counter--gray">Verified</span></div>
+          <div class="mb-1">Location: <span class="text-bold">Kishanbagh, Bahadurpura, Hyderabad, Telangana. 500064<span></div>
+
+          <!-- {% if user_can_edit_details %} -->
+
+          <div class="Box mt-4">
+            <div class="Box-header">
+              <h4 class="Box-title">Edit resource details</h4>
+            </div>
+
+            <div class="Box-row d-flex px-3 py-2 d-flex">
+              <form class="width-full" action="/schools/school-id/resources/resource-id/edit" method="post">
+                <div class="d-flex flex-column mb-2">
+                  <label for="resource-name" class="mb-2">Resource name</label>
+                  <input type="text" class="form-control width-full" id="resource-name">
+                </div>
+
+                <div class="d-flex flex-column mb-2">
+                  <label for="resource-count" class="mb-2">Capacity</label>
+                  <input type="number" class="form-control width-full" id="resource-count" min="0">
+                </div>
+
+                <div class="d-flex flex-column mb-2">
+                  <label for="resource-description" class="mb-2">Description</label>
+                  <textarea class="form-control width-full" id="resource-description" rows="5"></textarea>
+                </div>
+
+                <div class="border-bottom my-3"></div>
+
+                <div class="d-flex flex-justify-end">
+                  <input type="button" value="Delete" class="ml-2 btn btn-danger">
+
+                  <!-- {% if user_can_verify %} -->
+                    <input type="button" value="Verify" class="ml-2 btn">
+                  <!-- {% endif %} -->
+
+                  <input type="button" value="Save" class="ml-2 btn btn-primary">
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <!-- {% else %} -->
+          <div class="Box mt-4">
+            <div class="Box-header">
+              <h4 class="Box-title">Request resource</h4>
+            </div>
+
+            <form class="Box-row px-3 py-2 resource-request-form" action="/schools/school-id/resources/resource-id/edit" method="post">
+              <table class="width-full">
+                <tr>
+                  <td>Count</td>
+                  <td colspan="2"><input type="number" name="num" class="form-control" /></td>
+                </tr>
+                <tr>
+                  <td>Start date</td>
+                  <td><input type="date" name="startdate" class="form-control" /></td>
+                  <td>Start time</td>
+                  <td><input type="time" name="starttime" id="st" class="form-control" /></td>
+                </tr>
+                <tr>
+                  <td>End date</td>
+                  <td><input type="date" name="enddate" class="form-control" /></td>
+                  <td>End time</td>
+                  <td><input type="time" name="endtime" id="et" class="form-control" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="d-flex flex-items-center">
+                      <input type="checkbox" name="allday" class="mr-2">
+                      All day event
+                    </label>
+                  </td>
+                </tr>
+              </table>
+              <div class="d-flex flex-justify-end">
+                <input type="button" value="Reserve" class="ml-2 btn btn-primary">
+              </div>
+            </form>
+          </div>
+          <!-- {% endif %} -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-6">
+    <div class="bg-gray-light">
+      <div class="container-xl p-responsive f6 py-4 d-sm-flex flex-justify-between flex-items-center">
+        <ul class="list-style-none d-flex text-gray">
+          <li class="mr-3">© 2019 Loop Foundation.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
