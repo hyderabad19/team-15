@@ -1,0 +1,244 @@
+.dropdown {
+  position: relative
+}
+
+.dropdown.active .dropdown-menu-content {
+  display: block;
+  pointer-events: all
+}
+
+.dropdown-caret {
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top-style: solid;
+  border-top-width: 4px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0
+}
+
+.dropdown-menu {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(27,31,35,.15);
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(27,31,35,.15);
+  left: 0;
+  list-style: none;
+  margin-top: 2px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  position: absolute;
+  top: 100%;
+  width: 160px;
+  z-index: 100
+}
+
+.dropdown-menu:after,.dropdown-menu:before {
+  content: "";
+  display: inline-block;
+  position: absolute
+}
+
+.dropdown-menu:before {
+  border: 8px solid transparent;
+  border-bottom-color: rgba(27,31,35,.15)
+}
+
+.dropdown-menu:after {
+  border: 7px solid transparent;
+  border-bottom-color: #fff
+}
+
+.dropdown-menu>ul {
+  list-style: none
+}
+
+.dropdown-menu-no-overflow {
+  width: auto
+}
+
+.dropdown-menu-no-overflow .dropdown-item {
+  overflow: visible;
+  padding: 4px 16px;
+  text-overflow: inherit
+}
+
+.dropdown-item {
+  color: #24292e;
+  display: block;
+  overflow: hidden;
+  padding: 4px 10px 4px 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.dropdown-item.zeroclipboard-is-hover,.dropdown-item:focus,.dropdown-item:hover {
+  background-color: #0366d6;
+  color: #fff;
+  outline: none;
+  text-decoration: none
+}
+
+.dropdown-item.zeroclipboard-is-hover>.octicon,.dropdown-item:focus>.octicon,.dropdown-item:hover>.octicon {
+  color: inherit;
+  opacity: 1
+}
+
+.dropdown-item.btn-link,.dropdown-signout {
+  text-align: left;
+  width: 100%
+}
+
+.dropdown-signout {
+  background: none;
+  border: 0
+}
+
+.dropdown-divider {
+  border-top: 1px solid #e1e4e8;
+  display: block;
+  height: 0;
+  margin: 8px 0
+}
+
+.dropdown-header {
+  color: #586069;
+  font-size: 12px;
+  padding: 4px 16px
+}
+
+.dropdown-menu-content {
+  display: none
+}
+
+.dropdown-menu-content.anim-scale-in {
+  pointer-events: none;
+  position: relative;
+  z-index: 100
+}
+
+.dropdown-item[aria-checked=false] .octicon-check {
+  display: none
+}
+
+.dropdown-menu-w {
+  left: auto;
+  margin-right: 10px;
+  margin-top: 0;
+  right: 100%;
+  top: 0;
+  width: auto
+}
+
+.dropdown-menu-w:before {
+  border-color: transparent transparent transparent rgba(27,31,35,.15);
+  left: auto;
+  right: -16px;
+  top: 10px
+}
+
+.dropdown-menu-w:after {
+  border-color: transparent transparent transparent #fff;
+  left: auto;
+  right: -14px;
+  top: 11px
+}
+
+.dropdown-menu-e {
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  top: 0;
+  width: auto
+}
+
+.dropdown-menu-e:before {
+  border-color: transparent rgba(27,31,35,.15) transparent transparent;
+  left: -16px;
+  top: 10px
+}
+
+.dropdown-menu-e:after {
+  border-color: transparent #fff transparent transparent;
+  left: -14px;
+  top: 11px
+}
+
+.dropdown-menu-ne {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 3px;
+  top: auto
+}
+
+.dropdown-menu-ne:after,.dropdown-menu-ne:before {
+  right: auto;
+  top: auto
+}
+
+.dropdown-menu-ne:before {
+  border-bottom: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(27,31,35,.15);
+  bottom: -8px;
+  left: 9px
+}
+
+.dropdown-menu-ne:after {
+  border-bottom: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+  bottom: -7px;
+  left: 10px
+}
+
+.dropdown-menu-s {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%)
+}
+
+.dropdown-menu-s:before {
+  right: 50%;
+  top: -16px;
+  transform: translateX(50%)
+}
+
+.dropdown-menu-s:after {
+  right: 50%;
+  top: -14px;
+  transform: translateX(50%)
+}
+
+.dropdown-menu-sw {
+  left: auto;
+  right: 0
+}
+
+.dropdown-menu-sw:before {
+  left: auto;
+  right: 9px;
+  top: -16px
+}
+
+.dropdown-menu-sw:after {
+  left: auto;
+  right: 10px;
+  top: -14px
+}
+
+.dropdown-menu-se:before {
+  left: 9px;
+  top: -16px
+}
+
+.dropdown-menu-se:after {
+  left: 10px;
+  top: -14px
+}

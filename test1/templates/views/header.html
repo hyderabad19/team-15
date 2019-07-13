@@ -1,0 +1,31 @@
+<header class="Header Box-shadow">
+  <div class="Header-item">
+    <a class="Header-link d-flex flex-items-center" href="/" aria-label="Homepage">
+      <img class="nav-logo" src="/images/logo.jpg" alt="Loop Foundation Logo">
+    </a>
+  </div>
+
+  <div class="Header-item Header-item--full">
+    <nav class="d-flex" aria-label="Global">
+      Loop Education Foundation
+    </nav>
+  </div>
+
+  <div class="Header-item">
+    <nav class="d-flex flex-items-center">
+      <!-- {% if user_is_logged_in: %} -->
+      <a class="Header-link ml-3" href="/profile">
+        username
+      </a>
+
+      <form id="logout-form" class="m-0" action="/logout" method="POST">
+        <!-- {{ csrf_token }} -->
+        <button class="btn-link Header-link ml-3" type="submit">Logout</button>
+      </form>
+      <!-- {% else %} -->
+      <a class="Header-link ml-3" href="/login">Login</a>
+      <a class="Header-link ml-3" href="/register">Register</a>
+      <!-- {% endif %} -->
+    </nav>
+  </div>
+</header>

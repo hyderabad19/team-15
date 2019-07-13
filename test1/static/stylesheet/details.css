@@ -1,0 +1,25 @@
+.Details {
+  position: relative;
+}
+
+.Details summary::-webkit-details-marker {
+  display: none;
+}
+
+.Details summary {
+  padding-left: 2rem;
+}
+
+.Details::before {
+  position: absolute;
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: rotateZ(45deg);
+}
+
+.Details[open]::before {
+  content: '';
+}

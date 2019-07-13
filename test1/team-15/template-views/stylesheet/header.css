@@ -1,0 +1,40 @@
+.Header {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px;
+  z-index: 32
+}
+
+.Header,.Header-item {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap
+}
+
+.Header-item {
+  align-self: stretch;
+  margin-right: 16px
+}
+
+.Header-item--full {
+  flex: auto
+}
+
+.Header-link {
+  font-weight: 600;
+  white-space: nowrap;
+  color: rgba(3, 102, 214, 0.8);
+}
+
+.Header-link:focus,
+.Header-link:hover {
+  color: rgba(3, 102, 214, 1);
+  text-decoration: none;
+  opacity: 1;
+}
+
+@media (min-width: 1012px) {
+  .page-responsive .Header.Details .Header-item.Details-content--hidden {
+    display:flex!important
+  }
+}
