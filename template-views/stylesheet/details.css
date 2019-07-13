@@ -1,0 +1,29 @@
+.Details {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.Details summary::-webkit-details-marker {
+  display: none;
+}
+
+.Details::before {
+  position: absolute;
+  content: '';
+  width: 0.375rem;
+  height: 0.375rem;
+  left: -0.125rem;
+  top: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: rotateZ(225deg);
+}
+
+.Details[open]::before {
+  transform: rotateZ(45deg);
+}
+
+.Details[open] summary {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}

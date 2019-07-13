@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
+  <link href="/stylesheet/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="Header Box-shadow">
+    <div class="Header-item">
+      <a class="Header-link d-flex flex-items-center" href="/" aria-label="Homepage">
+        <img class="nav-logo" src="/images/logo.jpg" alt="Loop Foundation Logo">
+      </a>
+    </div>
+
+    <div class="Header-item Header-item--full">
+      <span class="text-bold">Loop Education Foundation</span>
+      <!-- <nav class="d-flex text-bold" aria-label="Global">
+        </nav> -->
+    </div>
+
+    <div class="Header-item">
+      <nav class="d-flex flex-items-center">
+        <!-- {% if user_is_logged_in: %} -->
+        <a class="Header-link ml-3" href="/profile">
+          username
+        </a>
+
+        <form id="logout-form" class="m-0" action="/logout" method="POST">
+          <!-- {{ csrf_token }} -->
+          <button class="btn-link Header-link ml-3" type="submit">Logout</button>
+        </form>
+        <!-- {% else %} -->
+        <a class="Header-link ml-3" href="/login">Login</a>
+        <a class="Header-link ml-3" href="/register">Register</a>
+        <!-- {% endif %} -->
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-sm-12 col-md-3">
+          <!-- <div class="Box">
+              <div class="Box-header">
+                <h3 class="Box-title">Actions</h3>
+              </div>
+            </div> -->
+          <nav class="menu" aria-label="Person settings">
+            <a class="menu-item" href="/requests" aria-current="page">
+              Approval requests
+              <span class="mt-1 ml-1 Counter Counter--gray">2</span>
+            </a>
+            <a class="menu-item" href="/reports">Reports</a>
+            <a class="menu-item selected" href="/clusters">Clusters</a>
+            <a class="menu-item" href="/schools/">Schools</a>
+          </nav>
+        </div>
+
+        <div class="column col-sm-12 col-md-9">
+          <div class="Box">
+            <div class="Box-header">
+              <div class="d-flex flex-items-center">
+                <h3 class="Box-title flex-item-equal mr-3">Clusters</h3>
+
+                <!-- <details class="dropdown details-reset details-overlay d-inline-block">
+                  <summary class="btn" aria-haspopup="true">
+                    Dropdown
+                    <div class="dropdown-caret"></div>
+                  </summary>
+
+                  <ul class="dropdown-menu dropdown-menu-sw">
+                    <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                    <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                    <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                  </ul>
+                </details> -->
+              </div>
+
+            </div>
+
+            <div class="Box-row d-flex px-3 py-2 approval-request">
+              <div class="d-flex flex-column flex-auto">
+                <div><a href="/clusters/cluster-id" class="no-underline link-gray-dark text-bold">Kishanbagh</a>
+                </div>
+                <div class="mt-1 text-small text-gray">
+                  <span class="text-small text-gray"><a class="muted-link text-bold" href="/clusters/cluster-id/schools">5 schools</a> in this cluster</span>
+                  |
+                  <span>4 resources being shared</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-6">
+    <div class="bg-gray-light">
+      <div class="container-xl p-responsive f6 py-4 d-sm-flex flex-justify-between flex-items-center">
+        <ul class="list-style-none d-flex text-gray">
+          <li class="mr-3">© 2019 Loop Foundation.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+@import './header.css';
+@import './dropdown.css';
+@import './details.css';
+
+html, body {
+  color: #212121;
+}
+
+.Header .nav-logo {
+  height: 3rem;
+}
+
+.Counter {
+  background-color: rgba(27,31,35,.08);
+  border-radius: 20px;
+  color: #444d56;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 5px;
+}
+
+.Counter--gray {
+  background-color: #6a737d;
+  color: #fff;
+}
+
+main {
+  min-height: 70vh;
+  padding: 1rem 0;
+}
+
+.Subhead {
+  font-weight: 400;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.resource-request-form td {
+  padding: 8px;
+}
+
+.resource-request-form input[type="date"],
+.resource-request-form input[type="time"],
+.resource-request-form input[type="number"],
+.resource-request-form input[type="text"] {
+  width: 100%;
+}
