@@ -1,3 +1,7 @@
+{% extends "team-15/base.html" %}
+
+{% block content %}
+<!--
 <html>
 
 <head>
@@ -15,31 +19,30 @@
 
     <div class="Header-item Header-item--full">
       <span class="text-bold">Loop Education Foundation</span>
-      <!-- <nav class="d-flex text-bold" aria-label="Global">
+    <nav class="d-flex text-bold" aria-label="Global">
         </nav> -->
-    </div>
+    <!-- </div>
 
     <div class="Header-item">
       <nav class="d-flex flex-items-center">
-        <!-- {% if user_is_logged_in: %} -->
-        <a class="Header-link ml-3" href="/profile">
+         {% if user_is_logged_in: %} -->
+       <!-- <a class="Header-link ml-3" href="/profile">
           username
         </a>
 
         <form id="logout-form" class="m-0" action="/logout" method="POST">
-          <!-- {{ csrf_token }} -->
-          <button class="btn-link Header-link ml-3" type="submit">Logout</button>
+          {{ csrf_token }} -->
+          <!--<button class="btn-link Header-link ml-3" type="submit">Logout</button>
         </form>
-        <!-- {% else %} -->
-        <a class="Header-link ml-3" href="/login">Login</a>
+        {% else %} -->
+       <!-- <a class="Header-link ml-3" href="/login">Login</a>
         <a class="Header-link ml-3" href="/register">Register</a>
-        <!-- {% endif %} -->
-      </nav>
+         {% endif %} -->
+      <!--</nav>
     </div>
   </header>
-
-
-  <main>
+<main>
+-->
     <div class="container">
       <div class="columns">
         <div class="column col-sm-12 col-md-3">
@@ -97,7 +100,7 @@
       </div>
     </div>
   </main>
-
+<!--
   <footer class="footer mt-6">
     <div class="bg-gray-light">
       <div class="container-xl p-responsive f6 py-4 d-sm-flex flex-justify-between flex-items-center">
@@ -110,3 +113,5 @@
 </body>
 
 </html>
+-->
+{% endblock %}
