@@ -22,7 +22,7 @@ class Mandal(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField(max_length=20,default='sai')
+    name = models.CharField(max_length=20,default='something')
     email = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
     contact = models.IntegerField(default=0)
@@ -32,19 +32,19 @@ class User(models.Model):
     def __str__(self):
         return self.email
 
-class Cluster(models.Model):
-    cid = models.IntegerField(default=0)
-    name = models.CharField(max_length=10)
+# class Cluster(models.Model):
+#     cid = models.IntegerField(default=10)
+#     name = models.CharField(max_length=10)
 
-    def __str__(self):
-        return self.cid
+#     def __str__(self):
+#         return str(self.cid)
 
 
 
 
 class School(models.Model):
     name = models.CharField(max_length=20)
-    address = models.CharField(max_length=20,default='new')
+    address = models.CharField(max_length=20,default='Hydernagar')
     verified = models.BooleanField(default=False)
     mandal = models.ForeignKey(Mandal,on_delete=models.CASCADE)
     district = models.ForeignKey(District,on_delete=models.CASCADE)
@@ -55,10 +55,11 @@ class School(models.Model):
 
 class ClusterSchool(models.Model):
     school = models.ForeignKey(School,on_delete=models.CASCADE)
-    cluster = models.ForeignKey(Cluster,on_delete=models.CASCADE)
+    #cluster = models.ForeignKey(Cluster,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.id
+        return str(self.cid)
+
 
 class TypeResource(models.Model):
     type = models.CharField(max_length=20)

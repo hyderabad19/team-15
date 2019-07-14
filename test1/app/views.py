@@ -64,11 +64,13 @@ def login(request):
 
 def clusters(request):
     cluster=models.Cluster.objects.all()
-    return render(request,'/clusters/index.html',cluster)
+    context = {'cluster':clusters}
+    return render(request,'clusters/index.html',context)
 
 def schools(request):
     school=models.School.objects.all()
-    return render(request,'/schools/index.html',school)
+    context = {'school':school}
+    return render(request,'schools/index.html',context)
 
 def school(request,id):
     schools=models.School.objects.filter(id=id)

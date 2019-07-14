@@ -1,5 +1,6 @@
 <html>
-
+{% load static %}
+{% load staticfiles %}
 <head>
   <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
   <link href="/stylesheet/main.css" rel="stylesheet">
@@ -21,7 +22,7 @@
 
     <div class="Header-item">
       <nav class="d-flex flex-items-center">
-        <!-- {% if user_is_logged_in: %} -->
+        <!-- {% if user_is_logged_in %} -->
         <a class="Header-link ml-3" href="/profile">
           username
         </a>
@@ -54,7 +55,7 @@
               <span class="mt-1 ml-1 Counter Counter--gray">2</span>
             </a>
             <a class="menu-item" href="/reports">Reports</a>
-            <a class="menu-item" href="/clusters">Clusters</a>
+            <a class="menu-item" href="{% url 'app:cluster' %}">Clusters</a>
             <a class="menu-item selected" href="/schools/">Schools</a>
           </nav>
         </div>
@@ -67,7 +68,6 @@
 
             <div class="Box-row d-flex px-3 py-2 approval-request">
               <div class="d-flex flex-column flex-auto">
-                {% for s in school %}
                 <div><a href="/schools/school-id" class="no-underline link-gray-dark text-bold">{{ s.name }}</a>
                 </div>
                 <div class="mt-1 text-small text-gray">
