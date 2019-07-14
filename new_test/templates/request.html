@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <!-- <table>
+<td>Count</td>
+<td>: <input type"number" name="num" /></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>: <input type="text" name="startdate" /></td>
+<td>  </td>
+<td>Start time</td>
+<td>: <input type="time" name="starttime" id="st" /></td>
+</tr>
+<tr>
+<td>End date</td>
+<td>: <input type="date" name="enddate" /></td>
+<td> </td>
+<td>End time</td>
+<td>: <input type="time" name="endtime" id="et" /></td>
+</tr>
+<tr>
+<td>
+All day event<input type="checkbox" name="allday" onclick="document.getElementById('st').disabled=this.checked;document.getElementById('et').disabled=this.checked;" />
+</td>
+</tr>
+</table> -->
+Date:<input type="text" name="date">
+Start:<input type="text" name="start">
+end:<input type="text" name="end">
+
+<input type="submit" name="submit" value="submit" />
+    </form>
+</body>
+</html>
