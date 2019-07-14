@@ -1,0 +1,35 @@
+body {
+  background: #f9f9f9;
+}
+
+.auth-form {
+  max-width: 20rem;
+  margin: auto;
+}
+
+.auth-form-header h1 {
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+.auth-form-body {
+  background: #fff;
+}
+
+.auth-form-body label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.auth-form-body .form-element {
+  margin-bottom: 1rem;
+}
+
+.auth-form-body .label-link {
+  float: right;
+}
+
+.auth-form-body .invalid-feedback {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}

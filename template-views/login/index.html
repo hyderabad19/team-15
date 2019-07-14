@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
+  <link href="/stylesheet/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="Header Box-shadow">
+    <div class="Header-item">
+      <a class="Header-link d-flex flex-items-center" href="/" aria-label="Homepage">
+        <img class="nav-logo" src="/images/logo.jpg" alt="Loop Foundation Logo">
+      </a>
+    </div>
+
+    <div class="Header-item Header-item--full">
+      <h1 class="text-bold">Loop Education Foundation</h1>
+      <!-- <nav class="d-flex text-bold" aria-label="Global">
+        </nav> -->
+    </div>
+
+    <div class="Header-item">
+      <nav class="d-flex flex-items-center">
+        <!-- {% if user_is_logged_in: %} -->
+        <a class="Header-link ml-3" href="/profile">
+          username
+        </a>
+
+        <form id="logout-form" class="m-0" action="/logout" method="POST">
+          <!-- {{ csrf_token }} -->
+          <button class="btn-link Header-link ml-3" type="submit">Logout</button>
+        </form>
+        <!-- {% else %} -->
+        <!-- <a class="Header-link ml-3" href="/login">Login</a>
+        <a class="Header-link ml-3" href="/register">Register</a> -->
+        <!-- {% endif %} -->
+      </nav>
+    </div>
+  </header>
+
+
+<main>
+  <link rel="stylesheet" href="/stylesheet/auth.css">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-form-header text-center py-2">
+        <h1>Sign in to ShaRe</h1>
+      </div>
+
+      <div class="auth-form-body p-4 Box-shadow">
+        <form action="/requests/" method="post">
+          <div class="form-element">
+            <label for="email">Username or email address</label>
+            <input id="email" type="email" class="form-control input-block" name="email" required autocomplete="email" autofocus>
+          </div>
+
+          <div class="form-element">
+            <label for="password">Password</label>
+
+            <input id="password" type="password" class="form-control input-block @error('password') is-invalid @enderror"
+              name="password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        </form>
+      </div>
+
+      <p class="create-account-callout mt-3 p-3 text-center">
+        <a href="/register">Create an account</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer mt-6">
+  <div class="bg-gray-light">
+    <div class="container-xl p-responsive f6 py-4 d-sm-flex flex-justify-between flex-items-center">
+      <ul class="list-style-none d-flex text-gray">
+        <li class="mr-3">© 2019 Loop Foundation.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

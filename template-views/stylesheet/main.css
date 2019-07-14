@@ -6,6 +6,10 @@ html, body {
   color: #212121;
 }
 
+.Header {
+  background: #fff;
+}
+
 .Header .nav-logo {
   height: 3rem;
 }
@@ -46,4 +50,8 @@ main {
 .resource-request-form input[type="number"],
 .resource-request-form input[type="text"] {
   width: 100%;
+}
+
+.Header .Header-item .text-bold {
+  font-size: 1.125rem;
 }
