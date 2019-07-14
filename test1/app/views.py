@@ -60,3 +60,21 @@ def login(request):
             return render(request,'error.html')
 
     return render(request,'login.html')
+
+
+def clusters(request):
+    cluster=models.Cluster.objects.all()
+    return render(request,'/clusters/index.html',cluster)
+
+def schools(request):
+    school=models.School.objects.all()
+    return render(request,'/schools/index.html',school)
+
+def school(request,id):
+    schools=models.School.objects.filter(id=id)
+    return render(request,'/schools/school-id/index.html',schools)
+
+def cluster(request,id):
+    clusters=models.Cluster.objects.filter(id=id)
+    return render(request,'/clusters/cluster-id/index.html',clusters)
+
